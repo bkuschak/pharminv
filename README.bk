@@ -1,0 +1,19 @@
+I wasn't able to build successfully on Mac, using harminv installed via MacPorts.
+This code wasn't finding the header file correctly. This fixed it. Simply adding
+CFLAGS to the makefile didn't work for some reason.
+
+$ export CFLAGS="-I/opt/local/include"
+$ make
+
+python3 -m pip install pharminv
+Defaulting to user installation because normal site-packages is not writeable
+Collecting pharminv
+  Using cached pharminv-0.4.tar.gz (55 kB)
+  Preparing metadata (setup.py) ... done
+Building wheels for collected packages: pharminv
+  Building wheel for pharminv (setup.py) ... done
+  Created wheel for pharminv: filename=pharminv-0.4-cp38-cp38-macosx_10_15_x86_64.whl size=41268 sha256=a85d5e3d7fe4d91b0030f7274b61885b2d6a41482672dc6cec6fd939fb1669cc
+  Stored in directory: /Users/bk/Library/Caches/pip/wheels/7f/26/a1/100b47b1e29bb571d96afcd09749c0ab6733c2f82db434094e
+Successfully built pharminv
+Installing collected packages: pharminv
+
